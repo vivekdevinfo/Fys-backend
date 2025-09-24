@@ -23,7 +23,8 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/api/v1/admin/category")
 public class CategoryAdminController {
-  //testing
+
+
     @Autowired
     private CategoryAdminService categoryAdminService;
 
@@ -65,6 +66,7 @@ public class CategoryAdminController {
     @PutMapping
     public SuccessResponse<CategoryResponse> updateNameCategory(@Valid @RequestBody UpdateNameCategoryRequest updateNameCategoryRequest)
             throws BadRequestException {
+      System.out.println("Jai shree");
         return categoryAdminService.updateNameCategory(updateNameCategoryRequest);
     }
 
