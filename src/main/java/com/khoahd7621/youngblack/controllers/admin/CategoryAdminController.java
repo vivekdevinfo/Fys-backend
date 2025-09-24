@@ -66,7 +66,7 @@ public class CategoryAdminController {
     @PutMapping
     public SuccessResponse<CategoryResponse> updateNameCategory(@Valid @RequestBody UpdateNameCategoryRequest updateNameCategoryRequest)
             throws BadRequestException {
-      System.out.println("Jai shree");
+
         return categoryAdminService.updateNameCategory(updateNameCategoryRequest);
     }
 
