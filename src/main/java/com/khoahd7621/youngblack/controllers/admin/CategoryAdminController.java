@@ -65,6 +65,7 @@ public class CategoryAdminController {
     @PutMapping
     public SuccessResponse<CategoryResponse> updateNameCategory(@Valid @RequestBody UpdateNameCategoryRequest updateNameCategoryRequest)
             throws BadRequestException {
+
         return categoryAdminService.updateNameCategory(updateNameCategoryRequest);
     }
 
@@ -82,6 +83,7 @@ public class CategoryAdminController {
     })
     @DeleteMapping("/{categoryId}")
     public SuccessResponse<NoData> deleteCategory(@PathVariable Integer categoryId) throws NotFoundException, BadRequestException {
+       System.out.println("Testing git");
         return categoryAdminService.deleteCategory(categoryId);
     }
 
